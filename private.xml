@@ -80,7 +80,7 @@
         <appendix>（コマンドキーでVi mode off）</appendix>
         <identifier>remap.with_vi_jis_command2eisuukana_prefer_command</identifier>
         <autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_L, KeyCode::COMMAND_L, KeyCode::JIS_EISUU, KeyCode::VK_CONFIG_FORCE_OFF_notsave_custom_complete_vimode</autogen>
-        <autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_R, KeyCode::COMMAND_R, KeyCode::JIS_KANA</autogen>
+        <autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_R, KeyCode::COMMAND_R, KeyCode::JIS_KANA, KeyCode::VK_CONFIG_FORCE_OFF_notsave_custom_complete_vimode</autogen>
       </item>
     </item>
   </item>
