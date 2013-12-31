@@ -97,6 +97,40 @@
     <autogen>--KeyToKey-- KeyCode::H, VK_CONTROL, KeyCode::FORWARD_DELETE</autogen>
   </item>
 
+    <item>
+      <name>Diamond Cursor+ With Space or Ctrl</name>
+      <appendix>Space to FN (+ When you type Space only, send Space)</appendix>
+      <appendix>Space(means FN)+j/k/i/l to move left/down/up/right.</appendix>
+      <appendix>Space(means FN)+u/m/o/. to pageUp/pageDown/home/end.</appendix>
+      <appendix>Space(means FN)+h//;/'. to forward delete/delete/enter.</appendix>
+      <appendix>Hence, they work with command/option/shift.</appendix>
+      <appendix>Example: command+space+j to command+left</appendix>
+      <identifier>remap.diamond_cursor_+_with_space</identifier>
+      <autogen>--KeyOverlaidModifier-- KeyCode::SPACE, KeyCode::FN, KeyCode::SPACE</autogen>
+      <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::FN, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::FN, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::FN, KeyCode::CURSOR_UP</autogen>
+      <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::FN, KeyCode::CURSOR_RIGHT</autogen>
+      <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::FN, KeyCode::PAGEUP</autogen>
+      <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::FN, KeyCode::PAGEDOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::FN, KeyCode::HOME</autogen>
+      <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::FN, KeyCode::END</autogen>
+      <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::FN, KeyCode::FORWARD_DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::FN, KeyCode::DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::FN, KeyCode::RETURN</autogen>
+
+      <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::CONTROL_L, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP</autogen>
+      <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::CURSOR_RIGHT</autogen>
+      <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::CONTROL_L, KeyCode::PAGEUP</autogen>
+      <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::CONTROL_L, KeyCode::PAGEDOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::CONTROL_L, KeyCode::HOME</autogen>
+      <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::CONTROL_L, KeyCode::END</autogen>
+      <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::FORWARD_DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::CONTROL_L, KeyCode::DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::CONTROL_L, KeyCode::RETURN</autogen>
+    </item>
 
 
   <!-- I no longer use these settings -->
@@ -132,30 +166,6 @@
 		<identifier>remap.commandSpace2return</identifier>
 		<autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::COMMAND_L, KeyCode::RETURN</autogen>
 	</item>
-
-
-    <item>
-      <name>Diamond Cursor+ With Space</name>
-      <appendix>Space to FN (+ When you type Space only, send Space)</appendix>
-      <appendix>Space(means FN)+j/k/i/l to move left/down/up/right.</appendix>
-      <appendix>Space(means FN)+u/m/o/. to pageUp/pageDown/home/end.</appendix>
-      <appendix>Space(means FN)+h//;/'. to forward delete/delete/enter.</appendix>
-      <appendix>Hence, they work with command/option/shift.</appendix>
-      <appendix>Example: command+space+j to command+left</appendix>
-      <identifier>remap.diamond_cursor_+_with_space</identifier>
-      <autogen>--KeyOverlaidModifier-- KeyCode::SPACE, KeyCode::FN, KeyCode::SPACE</autogen>
-      <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::FN, KeyCode::CURSOR_LEFT</autogen>
-      <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::FN, KeyCode::CURSOR_DOWN</autogen>
-      <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::FN, KeyCode::CURSOR_UP</autogen>
-      <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::FN, KeyCode::CURSOR_RIGHT</autogen>
-      <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::FN, KeyCode::PAGEUP</autogen>
-      <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::FN, KeyCode::PAGEDOWN</autogen>
-      <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::FN, KeyCode::HOME</autogen>
-      <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::FN, KeyCode::END</autogen>
-      <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::FN, KeyCode::FORWARD_DELETE</autogen>
-      <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::FN, KeyCode::DELETE</autogen>
-      <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::FN, KeyCode::RETURN</autogen>
-    </item>
 
 	<item>
 		<name>雪下駄配列</name>
