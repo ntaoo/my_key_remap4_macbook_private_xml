@@ -1,9 +1,31 @@
 <?xml version="1.0"?>
 <root>
   <item>
-    <name>Custom Complete Vi Mode</name>
+    <name>Right Hand Diamond Cursor Plus With COMMAND_R</name>
+    <appendix>COMMAND_R+j/k/i/l to move left/down/up/right.</appendix>
+    <appendix>COMMAND_R+u/m/o/. to pageUp/pageDown/home/end.</appendix>
+    <appendix>COMMAND_R+h//;/'. to forward delete/delete/enter.</appendix>
+    <appendix>they should work with command_l/option/shift.</appendix>
+    <appendix>Example: COMMAND_L+COMMAND_R+j to command+left</appendix>
+    <appendix>Example: OPTION+COMMAND_R+j to OPTION+left</appendix>
+    <identifier>remap.right_hand_diamond_cursor_plus_with_command_right</identifier>
+    <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::COMMAND_R, KeyCode::CURSOR_LEFT</autogen>
+    <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::COMMAND_R, KeyCode::CURSOR_DOWN</autogen>
+    <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::COMMAND_R, KeyCode::CURSOR_UP</autogen>
+    <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::COMMAND_R, KeyCode::CURSOR_RIGHT</autogen>
+    <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::COMMAND_R, KeyCode::PAGEUP</autogen>
+    <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::COMMAND_R, KeyCode::PAGEDOWN</autogen>
+    <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::COMMAND_R, KeyCode::HOME</autogen>
+    <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::COMMAND_R, KeyCode::END</autogen>
+    <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::COMMAND_R, KeyCode::FORWARD_DELETE</autogen>
+    <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::COMMAND_R, KeyCode::DELETE</autogen>
+    <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::COMMAND_R, KeyCode::RETURN</autogen>
+  </item>
+
+  <item>
+    <name>Right Hand Diamond Cursor Plus with Custom Complete Vi Mode</name>
     <item>
-      <name>What's Custom Complete Vi Mode?</name>
+      <name>What's Right Hand Diamond Cursor Plus with Custom Complete Vi Mode?</name>
       <appendix>You can use Vi style navigation on any applications when "Complete Vi Mode" is on.</appendix>
       <appendix>Turn on a setting below, and toggle "Complete Vi Mode".</appendix>
       <appendix></appendix>
@@ -15,15 +37,12 @@
       <appendix>- . to End</appendix>
       <appendix>- h to Forward Delete</appendix>
       <appendix>- ; to Delete</appendix>
-      <appendix>- Ctrl to turn on Vi Mode</appendix>
-      <appendix>- f to turn off Vi Mode</appendix>
-      <appendix>- g to turn off Vi Mode</appendix>
       <identifier vk_config="true">notsave.custom_complete_vimode</identifier>
       <autogen>__ShowStatusMessage__ Vi Mode</autogen>
       <block>
         <!-- these ugly hacks must be placed before the settings -->
-	      <!-- ugly hack for dvorak's command + s, c, t, v to enable basic key bindings-->
-	      <!-- s -->
+        <!-- ugly hack for dvorak's command + s, c, t, v to enable basic key bindings-->
+        <!-- s -->
         <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::COMMAND_L, KeyCode::SEMICOLON, ModifierFlag::COMMAND_L</autogen>
         <!-- c -->
         <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::COMMAND_L, KeyCode::I, ModifierFlag::COMMAND_L</autogen>
@@ -42,22 +61,21 @@
         <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_DOWN</autogen>
         <autogen>__KeyToKey__ KeyCode::I, KeyCode::CURSOR_UP</autogen>
         <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
-	      <autogen>--KeyToKey-- KeyCode::U, KeyCode::PAGEUP</autogen>
-	      <autogen>--KeyToKey-- KeyCode::M, KeyCode::PAGEDOWN</autogen>
-	      <autogen>--KeyToKey-- KeyCode::O, KeyCode::HOME</autogen>
-	      <autogen>--KeyToKey-- KeyCode::DOT, KeyCode::END</autogen>
-	      <autogen>--KeyToKey-- KeyCode::H, KeyCode::FORWARD_DELETE</autogen>
-	      <autogen>--KeyToKey-- KeyCode::SEMICOLON, KeyCode::DELETE</autogen>
-	      <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_LOCK_ALL_FORCE_OFF, KeyCode::VK_CONFIG_FORCE_OFF_notsave_custom_complete_vimode</autogen>
-	      <autogen>__KeyToKey__ KeyCode::G, KeyCode::VK_LOCK_ALL_FORCE_OFF, KeyCode::VK_CONFIG_FORCE_OFF_notsave_custom_complete_vimode</autogen>
-
+        <autogen>--KeyToKey-- KeyCode::U, KeyCode::PAGEUP</autogen>
+        <autogen>--KeyToKey-- KeyCode::M, KeyCode::PAGEDOWN</autogen>
+        <autogen>--KeyToKey-- KeyCode::O, KeyCode::HOME</autogen>
+        <autogen>--KeyToKey-- KeyCode::DOT, KeyCode::END</autogen>
+        <autogen>--KeyToKey-- KeyCode::H, KeyCode::FORWARD_DELETE</autogen>
+        <autogen>--KeyToKey-- KeyCode::SEMICOLON, KeyCode::DELETE</autogen>
+        <autogen>__KeyToKey__ KeyCode::F, KeyCode::VK_LOCK_ALL_FORCE_OFF, KeyCode::VK_CONFIG_FORCE_OFF_notsave_custom_complete_vimode</autogen>
+        <autogen>__KeyToKey__ KeyCode::G, KeyCode::VK_LOCK_ALL_FORCE_OFF, KeyCode::VK_CONFIG_FORCE_OFF_notsave_custom_complete_vimode</autogen>
       </block>
     </item>
     <item>
-      <name>Control_L to Control_L</name>
-      <appendix>(+ When you type Control_L only, turn on Vi Mode)</appendix>
-      <identifier>remap.custom_vimode_turn_on_controlL</identifier>
-      <autogen>__KeyOverlaidModifier__ KeyCode::CONTROL_L, KeyCode::CONTROL_L, KeyCode::VK_CONFIG_FORCE_ON_notsave_custom_complete_vimode</autogen>
+      <name>Option_R to Option_R</name>
+      <appendix>(+ When you type Option_R only, turn on Vi Mode)</appendix>
+      <identifier>remap.custom_vimode_turn_on_OPTION_R</identifier>
+      <autogen>__KeyOverlaidModifier__ KeyCode::OPTION_R, KeyCode::OPTION_R, KeyCode::VK_CONFIG_FORCE_ON_notsave_custom_complete_vimode</autogen>
     </item>
     <item>
       <name>Command_L to Command_L</name>
@@ -67,8 +85,8 @@
     </item>
   </item>
 
-  <item>
-    <name>For Japanese</name>
+    <item>
+    <name>Vi Mode Off For Japanese</name>
     <item>
       <name>左右のコマンドキー（⌘）を「英数／かな」としても使う</name>
       <appendix>（左コマンドキーを英数キーにする）</appendix>
@@ -86,6 +104,30 @@
   </item>
 
   <item>
+    <name>Right Hand Diamond Cursor Plus With FN</name>
+    <appendix>FN+j/k/i/l to move left/down/up/right.</appendix>
+    <appendix>FN+u/m/o/. to pageUp/pageDown/home/end.</appendix>
+    <appendix>FN+h//;/'. to forward delete/delete/enter.</appendix>
+    <appendix>they should work with command_l/option/shift.</appendix>
+    <appendix>Example: COMMAND_L+FN+j to command+left</appendix>
+    <appendix>Example: OPTION+FN+j to OPTION+left</appendix>
+    <appendix>Recommend to remap FN to left side of A key</appendix>
+    <identifier>remap.right_hand_diamond_cursor_plus_with_fn</identifier>
+    <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::FN, KeyCode::CURSOR_LEFT</autogen>
+    <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::FN, KeyCode::CURSOR_DOWN</autogen>
+    <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::FN, KeyCode::CURSOR_UP</autogen>
+    <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::FN, KeyCode::CURSOR_RIGHT</autogen>
+    <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::FN, KeyCode::PAGEUP</autogen>
+    <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::FN, KeyCode::PAGEDOWN</autogen>
+    <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::FN, KeyCode::HOME</autogen>
+    <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::FN, KeyCode::END</autogen>
+    <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::FN, KeyCode::FORWARD_DELETE</autogen>
+    <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::FN, KeyCode::DELETE</autogen>
+    <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::FN, KeyCode::RETURN</autogen>
+  </item>
+
+
+  <item>
     <name>Dvorak's Control+S to Delete</name>
     <identifier>remap.dvorak_controlS2delete</identifier>
     <autogen>--KeyToKey-- KeyCode::SEMICOLON, VK_CONTROL, KeyCode::DELETE</autogen>
@@ -98,7 +140,31 @@
   </item>
 
     <item>
-      <name>Diamond Cursor+ With Space or Ctrl</name>
+      <name>Diamond Cursor+ With Shift_R</name>
+      <appendix>Shift_R to FN</appendix>
+      <appendix>Shift_R(means FN)+j/k/i/l to move left/down/up/right.</appendix>
+      <appendix>Shift_R(means FN)+u/m/o/. to pageUp/pageDown/home/end.</appendix>
+      <appendix>Shift_R(means FN)+h//;/'. to forward delete/delete/enter.</appendix>
+      <appendix>Hence, they work with command/option/shift.</appendix>
+      <appendix>Example: command+Shift+j to command+left</appendix>
+      <appendix>You should use it with SandS</appendix>
+      <identifier>remap.diamond_cursor_+_with_Shift_R</identifier>
+      <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_R, KeyCode::FN</autogen>
+      <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::FN, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::FN, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::FN, KeyCode::CURSOR_UP</autogen>
+      <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::FN, KeyCode::CURSOR_RIGHT</autogen>
+      <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::FN, KeyCode::PAGEUP</autogen>
+      <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::FN, KeyCode::PAGEDOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::FN, KeyCode::HOME</autogen>
+      <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::FN, KeyCode::END</autogen>
+      <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::FN, KeyCode::FORWARD_DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::FN, KeyCode::DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::FN, KeyCode::RETURN</autogen>
+    </item>
+
+    <item>
+      <name>Diamond Cursor+ With Space</name>
       <appendix>Space to FN (+ When you type Space only, send Space)</appendix>
       <appendix>Space(means FN)+j/k/i/l to move left/down/up/right.</appendix>
       <appendix>Space(means FN)+u/m/o/. to pageUp/pageDown/home/end.</appendix>
@@ -118,7 +184,12 @@
       <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::FN, KeyCode::FORWARD_DELETE</autogen>
       <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::FN, KeyCode::DELETE</autogen>
       <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::FN, KeyCode::RETURN</autogen>
+    </item>
 
+    <item>
+      <name>Diamond Cursor+ With Ctrl</name>
+      <appendix>Example: command+ctrl+j to command+left</appendix>
+      <identifier>remap.diamond_cursor_+_with_ctrl</identifier>
       <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::CONTROL_L, KeyCode::CURSOR_LEFT</autogen>
       <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN</autogen>
       <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP</autogen>
@@ -132,7 +203,39 @@
       <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::CONTROL_L, KeyCode::RETURN</autogen>
     </item>
 
+    <item>
+      <name>Diamond Cursor+ With CommandRight</name>
+      <appendix>Example: command+CommandRight+j to command+left</appendix>
+      <identifier>remap.diamond_cursor_+_with_command_right</identifier>
+      <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::COMMAND_R, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::COMMAND_R, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::COMMAND_R, KeyCode::CURSOR_UP</autogen>
+      <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::COMMAND_R, KeyCode::CURSOR_RIGHT</autogen>
+      <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::COMMAND_R, KeyCode::PAGEUP</autogen>
+      <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::COMMAND_R, KeyCode::PAGEDOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::COMMAND_R, KeyCode::HOME</autogen>
+      <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::COMMAND_R, KeyCode::END</autogen>
+      <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::COMMAND_R, KeyCode::FORWARD_DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::COMMAND_R, KeyCode::DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::COMMAND_R, KeyCode::RETURN</autogen>
+    </item>
 
+    <item>
+      <name>Diamond Cursor+ With OptionRight</name>
+      <appendix>Example: command+OptionRight+j to command+left</appendix>
+      <identifier>remap.diamond_cursor_+_with_option_right</identifier>
+      <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::OPTION_R, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::OPTION_R, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::OPTION_R, KeyCode::CURSOR_UP</autogen>
+      <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::OPTION_R, KeyCode::CURSOR_RIGHT</autogen>
+      <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::OPTION_R, KeyCode::PAGEUP</autogen>
+      <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::OPTION_R, KeyCode::PAGEDOWN</autogen>
+      <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::OPTION_R, KeyCode::HOME</autogen>
+      <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::OPTION_R, KeyCode::END</autogen>
+      <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::OPTION_R, KeyCode::FORWARD_DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::OPTION_R, KeyCode::DELETE</autogen>
+      <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::OPTION_R, KeyCode::RETURN</autogen>
+    </item>
   <!-- I no longer use these settings -->
 	<item>
 		<name>Command_L+Command_R to Escape</name>
